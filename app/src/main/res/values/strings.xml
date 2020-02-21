@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FlashcardApp</string>
+    <string name="question">1+1=</string>
+    <string name="answer">2</string>
+</resources>
