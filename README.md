@@ -7,7 +7,7 @@
 Allows user to toggle between question and answer on a flashcard.
 
 ### App Walk-though
-<img src="https://github.com/anizhou/flashcardapp/blob/master/flashcardapplab1.gif" width=200><br>
+<img src="https://github.com/anizhou/FlashcardApp/blob/master/flashcardapplab1.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Android Studio
