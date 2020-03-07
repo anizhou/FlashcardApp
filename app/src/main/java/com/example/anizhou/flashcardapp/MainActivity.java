@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         findViewById(R.id.add_button).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,AddCardActivity.class);
@@ -88,6 +88,24 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
+
+        findViewById(R.id.eye_button).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(((ImageView)findViewById(R.id.eye_button)).getDrawable().getConstantState().equals(getDrawable(R.drawable.eye_visible).getConstantState())) {
+                    ((ImageView) findViewById(R.id.eye_button)).setImageResource(R.drawable.eye_invisible);
+                    (findViewById(R.id.answer_choice_1)).setVisibility(View.INVISIBLE);
+                    (findViewById(R.id.answer_choice_2)).setVisibility(View.INVISIBLE);
+                    (findViewById(R.id.answer_choice_3)).setVisibility(View.INVISIBLE);
+                }
+                else {
+                    ((ImageView) findViewById(R.id.eye_button)).setImageResource(R.drawable.eye_visible);
+                    (findViewById(R.id.answer_choice_1)).setVisibility(View.VISIBLE);
+                    (findViewById(R.id.answer_choice_2)).setVisibility(View.VISIBLE);
+                    (findViewById(R.id.answer_choice_3)).setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 100 && resultCode == RESULT_OK) {
