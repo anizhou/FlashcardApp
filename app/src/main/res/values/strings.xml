@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">FlashcardApp</string>
-    <string name="question">1+1=</string>
-    <string name="answer">2</string>
+    <string name="question">7 x 8 =</string>
+    <string name="answer">56</string>
+    <string name="answer_choice_1">56</string>
+    <string name="answer_choice_2">30</string>
+    <string name="answer_choice_3">15</string>
 </resources>
