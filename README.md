@@ -16,9 +16,9 @@ Allows user to save their flashcards even after closing and reopening the app. U
 
 ## Optional
 - [x] User can delete a card and no longer see it in their deck anymore
-- [ ] Flashcards are shown in random order instead of the order they were created in
-- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
-- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+- [x] Flashcards are shown in random order instead of the order they were created in
+- [x] User can edit a card and see the edit saved when they browse through their deck of cards
+- [x] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
 
 ## Lab 2
 
@@ -38,9 +38,9 @@ Allows user to create their own flashcard and edit the pre-existing flashcard.
 
 ## Optional
 - [x] User can edit a card
-- [ ] An error message is shown if the user doesn't enter both a Question and an Answer
-- [ ] A notification is shown if the card was created successfully
-- [ ] User can also enter multiple choice answers when creating a card
+- [x] An error message is shown if the user doesn't enter both a Question and an Answer
+- [x] A notification is shown if the card was created successfully
+- [x] User can also enter multiple choice answers when creating a card
 - [ ] App is further styled and customized!
 
 ## Lab 1
@@ -62,4 +62,4 @@ Allows user to toggle between question and answer on a flashcard.
 - [x] Style the question and answer side of the card to better distinguish between the two sides
 - [x] Add selectable multiple choice answers beneath the card
    - [x] Change the background color of the multiple choice answers when clicked to indicate whether the question was answered correctly
-- [ ] Further customize and style the card
+- [x] Further customize and style the card
