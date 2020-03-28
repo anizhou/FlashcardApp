@@ -60,21 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 final View questionSideView = findViewById(R.id.flashcard_question);
                 final View answerSideView = findViewById(R.id.flashcard_answer);
 
-                // get the center for the clipping circle
-                int cx = answerSideView.getWidth() / 2;
-                int cy = answerSideView.getHeight() / 2;
-                // get the final radius for the clipping circle
-                float finalRadius = (float) Math.hypot(cx, cy);
-                // create the animator for this view (the start radius is zero)
-                Animator anim = ViewAnimationUtils.createCircularReveal(answerSideView, cx, cy, 0f, finalRadius);
-
-                // hide the question and show the answer to prepare for playing the animation!
-                questionSideView.setVisibility(View.INVISIBLE);
-                answerSideView.setVisibility(View.VISIBLE);
-
-                anim.setDuration(800);
-                anim.start();
-
                 questionSideView.animate()
                         .rotationY(90)
                         .setDuration(200)
@@ -96,6 +81,21 @@ public class MainActivity extends AppCompatActivity {
 
                 findViewById(R.id.flashcard_question).setCameraDistance(25000);
                 findViewById(R.id.flashcard_answer).setCameraDistance(25000);
+
+                // get the center for the clipping circle
+                int cx = answerSideView.getWidth() / 2;
+                int cy = answerSideView.getHeight() / 2;
+                // get the final radius for the clipping circle
+                float finalRadius = (float) Math.hypot(cx, cy);
+                // create the animator for this view (the start radius is zero)
+                Animator anim = ViewAnimationUtils.createCircularReveal(answerSideView, cx, cy, 0f, finalRadius);
+
+                // hide the question and show the answer to prepare for playing the animation!
+                questionSideView.setVisibility(View.INVISIBLE);
+                answerSideView.setVisibility(View.VISIBLE);
+
+                anim.setDuration(800);
+                anim.start();
             }
         });
 
@@ -196,8 +196,21 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
                 intent.putExtra("question",((TextView)findViewById(R.id.flashcard_question)).getText().toString());
                 intent.putExtra("answer",((TextView)findViewById(R.id.flashcard_answer)).getText().toString());
-                intent.putExtra("wrongAnswer1",((TextView)findViewById(R.id.answerChoice2)).getText().toString());
-                intent.putExtra("wrongAnswer2",((TextView)findViewById(R.id.answerChoice3)).getText().toString());
+                if(((TextView) findViewById(R.id.answerChoice1)).getText().toString().equals(((TextView)(findViewById(R.id.flashcard_answer))).getText().toString())) {
+                    intent.putExtra("wrongAnswer1",((TextView)findViewById(R.id.answerChoice2)).getText().toString());
+                    intent.putExtra("wrongAnswer2",((TextView)findViewById(R.id.answerChoice3)).getText().toString());
+                }
+
+                if(((TextView) findViewById(R.id.answerChoice2)).getText().toString().equals(((TextView)(findViewById(R.id.flashcard_answer))).getText().toString())) {
+                    intent.putExtra("wrongAnswer1",((TextView)findViewById(R.id.answerChoice1)).getText().toString());
+                    intent.putExtra("wrongAnswer2",((TextView)findViewById(R.id.answerChoice3)).getText().toString());
+                }
+
+                if(((TextView) findViewById(R.id.answerChoice3)).getText().toString().equals(((TextView)(findViewById(R.id.flashcard_answer))).getText().toString())) {
+                    intent.putExtra("wrongAnswer1",((TextView)findViewById(R.id.answerChoice1)).getText().toString());
+                    intent.putExtra("wrongAnswer2",((TextView)findViewById(R.id.answerChoice2)).getText().toString());
+                }
+
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
