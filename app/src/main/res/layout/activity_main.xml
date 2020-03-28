@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/answer_choice_1"
+        android:id="@+id/answerChoice1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -59,7 +59,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/answer_choice_2"
+        android:id="@+id/answerChoice2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -77,7 +77,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/answer_choice_3"
+        android:id="@+id/answerChoice3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -137,5 +137,13 @@
         android:layout_alignTop="@+id/next_button"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/trash_button" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/next_button"
+        android:layout_alignStart="@+id/edit_button"
+        android:textSize="24sp" />
 
 </RelativeLayout>

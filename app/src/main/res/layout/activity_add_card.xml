@@ -31,11 +31,33 @@
         android:id="@+id/newAnswer"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="141dp"
+        android:layout_marginTop="153dp"
         android:ems="10"
         android:hint="Enter The Answer Here"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/newWrongAnswer1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:hint="Enter A Wrong Answer Option Here"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/newWrongAnswer2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="111dp"
+        android:ems="10"
+        android:hint="Enter Another Wrong Answer Option Here"
         android:inputType="textMultiLine" />
 
     <ImageView
