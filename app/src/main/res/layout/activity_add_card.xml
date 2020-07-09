@@ -33,7 +33,7 @@
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="153dp"
+        android:layout_marginTop="200dp"
         android:ems="10"
         android:hint="Enter The Answer Here"
         android:inputType="textMultiLine" />
@@ -44,7 +44,7 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="320dp"
         android:ems="10"
         android:hint="Enter A Wrong Answer Option Here"
         android:inputType="textMultiLine" />
@@ -55,7 +55,7 @@
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="111dp"
+        android:layout_marginBottom="180dp"
         android:ems="10"
         android:hint="Enter Another Wrong Answer Option Here"
         android:inputType="textMultiLine" />
