@@ -61,7 +61,7 @@ Allows user to create their own flashcard and edit the pre-existing flashcard.
 - [x] An error message is shown if the user doesn't enter both a Question and an Answer
 - [x] A notification is shown if the card was created successfully
 - [x] User can also enter multiple choice answers when creating a card
-- [ ] App is further styled and customized!
+- [x] App is further styled and customized!
 
 ## Lab 1
 
